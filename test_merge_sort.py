@@ -14,7 +14,7 @@ class MergeSortTest(TestCase):
         test_case = []
         expected = []
         algo_result = MergeSort().divide_conquer(test_case)
-        self.assertEqual(algo_result, sorted_list)
+        self.assertEqual(expected, algo_result)
 
     #   test one element
     def test_one_element(self):
@@ -51,6 +51,12 @@ class MergeSortTest(TestCase):
         algo_result = MergeSort().divide_conquer(test_case)
         self.assertEqual(expected, algo_result)
 
+    #   test many elements
+    def test_many_elements(self):
+        test_case = [1, 20, 3, 0, -2, 10, 4, 20, 34, 45, 45, 65]
+        expected = [-2, 0, 1, 3, 4, 10, 20, 20, 34, 45, 45, 65]
+        algo_result = MergeSort().divide_conquer(test_case)
+        self.assertEqual(expected, algo_result)
 
 
 
