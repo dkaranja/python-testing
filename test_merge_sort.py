@@ -58,7 +58,12 @@ class MergeSortTest(TestCase):
         algo_result = MergeSort().divide_conquer(test_case)
         self.assertEqual(expected, algo_result)
 
-
+    #   test for negative numbers
+    def test_negative_numbers(self):
+        test_case = [-1, -20, -40, -20, -3, -34, -45]
+        expected = [-45, -40, -34, -20, -20, -3, -1]
+        algo_result = MergeSort().divide_conquer(test_case)
+        self.assertEqual(expected, algo_result)
 
 
 
