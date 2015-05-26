@@ -37,7 +37,12 @@ class MergeSortTest(TestCase):
         algo_result = MergeSort().divide_conquer(test_case)
         self.assertEqual(expected, algo_result)
 
-
+    #   test with 5 unsorted elements
+    def test_five_unsorted_elements(self):
+        test_case = [20, -3, 2, 40, -10]
+        expected = [-10, -3, 2, 20, 40]
+        algo_result = MergeSort().divide_conquer(test_case)
+        self.assertEqual(expected, algo_result)
 
 
 
