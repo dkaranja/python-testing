@@ -13,13 +13,27 @@ class MergeSortTest(TestCase):
     def test_empty_list(self):
         test_case = []
         expected = []
-        sorted_list = MergeSort().divide_conquer(test_case)
-        self.assertEqual(expected, sorted_list)
+        algo_result = MergeSort().divide_conquer(test_case)
+        self.assertEqual(algo_result, sorted_list)
 
     #   test one element
     def test_one_element(self):
         test_case = [10]
         expected = [10]
+        algo_result = MergeSort().divide_conquer(test_case)
+        self.assertEqual(expected, algo_result)
+
+    #   test list with two unsorted elements
+    def test_two_unsorted_elements(self):
+        test_case = [100, -2]
+        expected = [-2, 100]
+        algo_result = MergeSort().divide_conquer(test_case)
+        self.assertEqual(expected, algo_result)
+
+    #   test list with two sorted elements
+    def test_two_sorted_elements(self):
+        test_case = [3, 10]
+        expected = [3, 10]
         algo_result = MergeSort().divide_conquer(test_case)
         self.assertEqual(expected, algo_result)
 
