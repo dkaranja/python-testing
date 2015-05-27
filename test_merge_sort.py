@@ -1,8 +1,9 @@
 #!/usr/bin/python
+from unittest import TestCase
 from merge_sort import MergeSort
 
 
-class MergeSortTest(object):
+class MergeSortDivideConquerTest(TestCase):
 
     #   test an empty list
     def test_empty_list(self):
@@ -62,7 +63,57 @@ class MergeSortTest(object):
 
     #   test divide_conquer param
     def test_divide_conquer_param_is_list(self):
-        test_case = 1
-        expected = list
+        test_case = type([8])
+        expected = type(list)
         algo_result = MergeSort().divide_conquer(test_case)
         self.assertEqual(expected, algo_result)
+
+
+class MergeSortMergeTest(TestCase):
+
+    #   test when both lists are empty
+    def test_two_empty_lists(self):
+        test_list_one = []
+        test_list_two = []
+
+        expected = []
+        algo_result = MergeSort().merge(test_list_one, test_list_two)
+        self.assertEqual(expected, algo_result)
+
+    #   test when list_one is empty
+    def test_when_list_one_is_empty(self):
+        list_one = []
+        list_two = [7, 90]
+
+        expected = [7, 90]
+        algo_result = MergeSort().merge(list_one, list_two)
+        self.assertEqual(expected, algo_result)
+
+    #   test when list two is empty
+    def test_when_list_two_is_empty(self):
+        list_one = [1, 3, 7]
+        list_two = []
+
+        expected = [1, 3, 7]
+        algo_result = MergeSort().merge(list_one, list_two)
+        self.assertEqual(expected, algo_result)
+
+    #   test when both lists have data
+    def test_when_both_lists_have_data(self):
+        list_one = [8, 9, 20, 34]
+        list_two = [3, 8, 10, 23, 39, 40]
+
+        expected = [3, 8, 8, 9, 10, 20, 23, 34, 39, 40]
+        algo_result = MergeSort().merge(list_one, list_two)
+        self.assertEqual(expected, algo_result)
+
+
+
+
+
+
+
+
+
+
+

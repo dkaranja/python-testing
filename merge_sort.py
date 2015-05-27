@@ -28,7 +28,7 @@ class MergeSort(object):
             return MergeSort().merge(conquered_list_one, conquered_list_two)
         else:
             print("{} was given, a list was expected".format(param_type))
-            return param_type is not list
+            return param_type
 
     def merge(self, list_one, list_two):
         i, j, sorted_list = 0, 0, []
@@ -63,3 +63,6 @@ if __name__ == "__main__":
 
     print("Before: \n {}".format(my_list))
     print("After: \n {}".format(obj.divide_conquer(my_list)))
+
+
+
