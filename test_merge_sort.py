@@ -1,13 +1,8 @@
 #!/usr/bin/python
-from unittest import TestCase
-
 from merge_sort import MergeSort
 
 
-class MergeSortTest(TestCase):
-
-    def setUp(self):# NOQA
-        self.algo_under_test = MergeSort()
+class MergeSortTest(object):
 
     #   test an empty list
     def test_empty_list(self):
@@ -65,7 +60,9 @@ class MergeSortTest(TestCase):
         algo_result = MergeSort().divide_conquer(test_case)
         self.assertEqual(expected, algo_result)
 
-
-
-
-
+    #   test divide_conquer param
+    def test_divide_conquer_param_is_list(self):
+        test_case = 1
+        expected = list
+        algo_result = MergeSort().divide_conquer(test_case)
+        self.assertEqual(expected, algo_result)
