@@ -25,3 +25,37 @@ class MergeSort(object):
 
         return MergeSort().merge(conquered_list_one, conquered_list_two)
 
+    def merge(self, list_one, list_two):
+        i, j, sorted_list = 0, 0, []
+        length_one = len(list_one)
+        length_two = len(list_two)
+
+        #   while any of the list is not empty
+        while(i < length_one) or (i < length_two):
+            if(i < length_one) and (j < length_two):
+                #   both lists have data
+                if list_one[i] <= list_two[j]:
+                    sorted_list.append(list_one[i])
+                    i += 1
+                else:
+                    sorted_list.append(list_two[j])
+                    j += 1
+            elif i < length_one:
+                #   only list one has data
+                sorted_list.append(list_one[i])
+                i += 1
+            else:
+                #   only list two has data
+                sorted_list.append(list_two[j])
+                j += 1
+        else:
+            return sorted_list
+
+
+
+
+
+
+
+
+
