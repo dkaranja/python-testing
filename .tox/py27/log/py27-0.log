@@ -1,0 +1,10 @@
+actionid: py27
+msg: getenv
+cmdargs: ['/Users/deebeat/.virtualenvs/py_tests/bin/python', '-m', 'virtualenv', '--python', '/Users/deebeat/.virtualenvs/py_tests/bin/python2.7', 'py27']
+env: {'PATH': '/Users/deebeat/savannah_informatics/training/tests/python/mergesort_karanja/.tox/py27/bin:/Users/deebeat/.virtualenvs/py_tests/bin:/usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin', 'VIRTUAL_ENV': '/Users/deebeat/savannah_informatics/training/tests/python/mergesort_karanja/.tox/py27', 'PYTHONHASHSEED': '3835166253', 'TMPDIR': '/var/folders/3q/l_m16gmx6hx_44p7kwz_78lw0000gn/T/'}
+
+Using real prefix '/System/Library/Frameworks/Python.framework/Versions/2.7'
+New python executable in py27/bin/python2.7
+Also creating executable in py27/bin/python
+Installing setuptools, pip, wheel...done.
+Running virtualenv with interpreter /Users/deebeat/.virtualenvs/py_tests/bin/python2.7

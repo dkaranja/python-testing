@@ -1,0 +1,13 @@
+actionid: py27
+msg: getenv
+cmdargs: [local('/Users/deebeat/savannah_informatics/training/tests/python/mergesort_karanja/.tox/py27/bin/pip'), 'install', 'pytest']
+env: {'PATH': '/Users/deebeat/savannah_informatics/training/tests/python/mergesort_karanja/.tox/py27/bin:/Users/deebeat/.virtualenvs/py_tests/bin:/usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin', 'VIRTUAL_ENV': '/Users/deebeat/savannah_informatics/training/tests/python/mergesort_karanja/.tox/py27', 'PYTHONHASHSEED': '3835166253', 'TMPDIR': '/var/folders/3q/l_m16gmx6hx_44p7kwz_78lw0000gn/T/'}
+
+Collecting pytest
+/Users/deebeat/savannah_informatics/training/tests/python/mergesort_karanja/.tox/py27/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+  Using cached pytest-2.7.1-py2.py3-none-any.whl
+Collecting py>=1.4.25 (from pytest)
+  Using cached py-1.4.28-py2.py3-none-any.whl
+Installing collected packages: py, pytest
+Successfully installed py-1.4.28 pytest-2.7.1
