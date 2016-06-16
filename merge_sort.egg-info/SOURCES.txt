@@ -1,6 +1,0 @@
-setup.py
-merge_sort.egg-info/PKG-INFO
-merge_sort.egg-info/SOURCES.txt
-merge_sort.egg-info/dependency_links.txt
-merge_sort.egg-info/requires.txt
-merge_sort.egg-info/top_level.txt
