@@ -5,8 +5,10 @@ Implments the class based merge sort algorithm
 
 
 class MergeSort(object):
+    """Merge Sort implementation."""
 
     def divide_conquer(self, full_list):
+        """Recursively dividde and conquer a list."""
         param_type = type(full_list)
         if param_type is list:
             list_length = len(full_list)
@@ -22,15 +24,16 @@ class MergeSort(object):
                 right_half = full_list[mid:]
 
                 #   conquer
-                conquered_list_one = MergeSort().divide_conquer(left_half)
-                conquered_list_two = MergeSort().divide_conquer(right_half)
+                conquered_list_one = self.divide_conquer(left_half)
+                conquered_list_two = self.divide_conquer(right_half)
 
-            return MergeSort().merge(conquered_list_one, conquered_list_two)
+            return self.merge(conquered_list_one, conquered_list_two)
         else:
             print("{} was given, a list was expected".format(param_type))
             return param_type
 
     def merge(self, list_one, list_two):
+        """Merge two conquered lists."""
         i, j, sorted_list = 0, 0, []
         length_one = len(list_one)
         length_two = len(list_two)
@@ -59,10 +62,10 @@ class MergeSort(object):
 
 if __name__ == "__main__":
     my_list = [-2, 3, 6, 8, -20, 2, 67, 345, 2345, 34, -299]
-    obj = MergeSort()
+    sort_instance = MergeSort()
 
     print("Before: \n {}".format(my_list))
-    print("After: \n {}".format(obj.divide_conquer(my_list)))
+    print("After: \n {}".format(sort_instance.divide_conquer(my_list)))
 
 
 
